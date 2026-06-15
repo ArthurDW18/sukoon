@@ -56,7 +56,31 @@ function getWeather(latitude, longitude) {
 }
 
 function displayWeather() {
-	iconElement.innerHTML = `<img src="assets/icons/${CONFIG.weatherIcons}/${weather.iconId}.png"/>`;
-	tempElement.innerHTML = `${weather.temperature.value.toFixed(0)}°<span class="darkfg">${tempUnit}</span>`;
-	descElement.innerHTML = weather.description;
+	const iconMap = {
+		'01d': 'ph-sun',
+		'01n': 'ph-moon',
+		'02d': 'ph-cloud-sun',
+		'02n': 'ph-cloud-moon',
+		'03d': 'ph-cloud',
+		'03n': 'ph-cloud',
+		'04d': 'ph-clouds',
+		'04n': 'ph-clouds',
+		'09d': 'ph-cloud-rain',
+		'09n': 'ph-cloud-rain',
+		'10d': 'ph-cloud-rain',
+		'10n': 'ph-cloud-rain',
+		'11d': 'ph-cloud-lightning',
+		'11n': 'ph-cloud-lightning',
+		'13d': 'ph-snowflake',
+		'13n': 'ph-snowflake',
+		'50d': 'ph-cloud-fog',
+		'50n': 'ph-cloud-fog'
+	};
+
+	const iconClass = iconMap[weather.iconId] || 'ph-cloud';
+	iconElement.innerHTML = `<i id="weatherIcon" class="ph ${iconClass}"></i>`;
+	tempElement.innerHTML = `${weather.temperature.value.toFixed(0)}°<span class="unit">${tempUnit}</span>`;
+	
+	const capitalizedDesc = weather.description.charAt(0).toUpperCase() + weather.description.slice(1);
+	descElement.innerText = capitalizedDesc;
 }
