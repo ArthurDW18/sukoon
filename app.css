@@ -11,19 +11,25 @@
 :root {
   /* Font Size */
   --fg-primary: 12vh; /* Time and Greetings */
-  --fg-secondary: 3vh; /* Greetings and Weather widger */
+  --fg-secondary: 3vh; /* Greetings and Weather widget */
   --fg-date: 8vh; /* Date */
   --fg-list: 2vh; /* Links List */
   --icon: 3vh; /* Icon Size */
 
   /* Fonts Color */
-  --fg: #3a3a3a; /* Foreground color */
-  --sfg: #494949; /* Sceondary Foreground color */
+  --fg: #1a1a1a; /* Rich display text */
+  --sfg: #55555c; /* Muted secondary text */
 
   /* Light Colors  */
-  --accent: #57a0d9; /* Hover color */
-  --background: #f5f5f5; /* Background color */
-  --cards: #e4e6e6; /* Cards color */
+  --accent: #e5e5ea; /* Subtle hover color */
+  --background: #fafafa; /* Minimalist background */
+  --cards: #ffffff; /* Premium white cards */
+
+  /* Card Accents & Borders */
+  --card-border: rgba(0, 0, 0, 0.05);
+  --card-hover-border: rgba(0, 0, 0, 0.12);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+  --card-hover-shadow: 0 16px 36px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03);
 
   /* Image background  */
   --imgbg: url(assets/background.jpg); /* Image URL */
@@ -35,13 +41,19 @@
 
 .darktheme {
   /* Dark Colors  */
-  --accent: #57a0d9; /* Hover color */
-  --background: #19171a; /* Background color */
-  --cards: #201e21; /* Cards color */
+  --accent: #2c2c2e; /* Subtle dark hover color */
+  --background: #0b0a0d; /* Deep rich dark background */
+  --cards: #141216; /* Dark cards background */
 
   /* Fonts Color */
-  --fg: #d8dee9; /* Foreground color */
-  --sfg: #2c292e; /* Secondary Foreground color */
+  --fg: #f4f4f7; /* High-contrast clean silver-white */
+  --sfg: #8e8e93; /* Soft silver-gray for secondary text */
+
+  /* Card Accents & Borders */
+  --card-border: rgba(255, 255, 255, 0.03);
+  --card-hover-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: 0 24px 60px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.15);
 
   /* Image background  */
   --imgcol: linear-gradient(
@@ -121,13 +133,16 @@ body {
 
 .card {
   background-color: var(--cards);
-  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.35);
-  border-radius: 5px;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .card:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .timeBlock {
