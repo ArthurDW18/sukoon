@@ -1,7 +1,7 @@
 // ┌─┐┬─┐┌─┐┌─┐┌┬┐┬┌┐┌┌─┐┌─┐
 // │  ├┬┘├┤ ├┤  │ │││││ ┬└─┐
 // └─┘┴└─└─┘└─┘ ┴ ┴┘└┘└─┘└─┘
-// Function to set Greetings with a highly polished letter-by-letter typewriter effect
+// Function to set Greetings with a typewriter effect followed by a paused period
 
 const today = new Date();
 const hour = today.getHours();
@@ -24,10 +24,8 @@ if (hour >= 23 || hour < 6) {
 }
 
 const typeWriter = (element, text, speed = 40) => {
-	// Setup text span and dynamic inline caret
-	element.innerHTML = '<span id="greeting-text"></span><span id="caret" class="typewriter-caret"></span>';
+	element.innerHTML = '<span id="greeting-text"></span>';
 	const textSpan = document.getElementById('greeting-text');
-	const caretSpan = document.getElementById('caret');
 	
 	let i = 0;
 	const type = () => {
@@ -46,10 +44,11 @@ const typeWriter = (element, text, speed = 40) => {
 			
 			setTimeout(type, delay);
 		} else {
-			// Finished typing: keep blinking for 1.2 seconds, then fade out
+			// Finished typing the greeting and name:
+			// Pause for 350ms, then append a single period "."
 			setTimeout(() => {
-				caretSpan.classList.add('done');
-			}, 1200);
+				textSpan.innerText += '.';
+			}, 350);
 		}
 	};
 	

@@ -374,29 +374,5 @@ body {
   }
 }
 
-/* Typewriter Caret Styles */
-.typewriter-caret {
-  display: inline-block;
-  width: 1.5px; /* Narrower */
-  height: 0.85em; /* Shorter to not look too large compared to text */
-  background-color: var(--fg);
-  opacity: 0.35; /* Softer base opacity */
-  margin-left: 3px;
-  vertical-align: -0.05em; /* Better vertical alignment for shorter caret */
-  animation: blink 0.8s ease-in-out infinite alternate; /* Smooth breathing fade in/out */
-}
 
-.typewriter-caret.done {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-@keyframes blink {
-  from {
-    opacity: 0.08; /* Gentle fade-out limit */
-  }
-  to {
-    opacity: 0.5; /* Gentle fade-in limit */
-  }
-}
 
