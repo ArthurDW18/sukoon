@@ -1,63 +1,124 @@
-# Sukoon
+<div align="center">
 
-A minimal, premium startpage with Swiss typography, calm aesthetics, and thoughtful micro-interactions.
+# सुकून
 
-> *Sukoon* (सुकून) — Urdu/Hindi for peace, tranquility.
+**S U K O O N**
 
-<!-- Add your screenshot here: save as assets/img/sukoon-light.png -->
-<!-- ![Sukoon](assets/img/sukoon-light.png) -->
+A minimal, premium startpage with Swiss typography,
+calm aesthetics, and thoughtful micro-interactions.
+
+<br>
+
+![Sukoon — Light Mode](assets/img/sukoon-light.png)
+
+<br>
+
+![Sukoon — Dark Mode](assets/img/sukoon-dark.png)
+
+<br>
+
+## Demonstration
+
+<br>
+
+<!-- To embed the video inline: edit this README on GitHub, drag-drop assets/img/sukoon-demo.mp4
+     into the editor. GitHub uploads it to their CDN and replaces this comment with a playable video. -->
+
+[Watch the demo](assets/img/sukoon-demo.mp4)
+
+<br>
+
+Staggered entry animations, typewriter greeting with natural keystroke jitter,
+and smooth theme toggle with icon rotation.
+
+<br>
 
 ---
 
+<br>
+
 ## Features
 
-- Geist variable font for clean, modern typography
-- Typewriter greeting with natural keystroke jitter and punctuation pauses
-- Phosphor Icons via fast CDN class-based rendering
-- Swiss date and weather stack with centered typographic layout
-- Symmetric accent color system across clock, greeting, date, and weather
-- Staggered fade-and-slide-up entry animations on load
-- Dark and light mode with smooth icon rotation and tactile feedback
-- Expanding underline hover effect on list links
+<br>
+
+### Typography
+
+- **Geist variable font** loaded globally for clean, modern rendering
+- **Swiss date and weather stack** — centered typographic layout mirroring the clock
+- **Phosphor Icons** via fast CDN class-based rendering
+
+<br>
+
+### Animations
+
+- **Typewriter greeting** with randomized keystroke speed, punctuation pauses, and a smart fading caret
+- **Staggered card entry** — cards fade and slide up sequentially on page load
+- **Expanding underline hovers** on list links — center-expanding effect
+- **Tactile button feedback** — scale-down on theme toggle click
+
+<br>
+
+### Theming
+
+- **Dark and light mode** with smooth 180° icon rotation
+- **Symmetric accent color system** across clock separator, greeting name, date elements, and weather details
+- **Auto-switch** by OS preference or time of day
+
+<br>
+
+### Customization
+
+- Three layout modes: `bento`, `lists`, `buttons`
 - Configurable 12h/24h clock with zero-padding
 - Minimal weather widget via OpenWeatherMap
-- Three layout modes: bento, lists, buttons
+- Full control via `config.js`
+
+<br>
+
+---
+
+<br>
 
 ## Quick Start
 
-1. Fork this repo
-2. Copy `config.example.js` to `config.js` and edit it
-3. Enable GitHub Pages (Settings > Pages > Source > `gh-pages` branch)
+<br>
+
+1. **Fork** this repo
+2. **Edit** `config.js` — add your name, links, and weather API key
+3. **Enable** GitHub Pages → Settings → Pages → Source: `master`
+
+Set `https://<your-username>.github.io/sukoon/` as your browser homepage.
+
+<br>
+
+---
+
+<br>
 
 ## Installation
+
+<br>
 
 ### GitHub Pages
 
 1. Fork this repo
-2. Copy `config.example.js` to `config.js` and add your weather API key and personal links
-3. Go to Settings > Pages > Source and select the `gh-pages` branch
-4. Set `https://<your-username>.github.io/sukoon/` as your browser homepage
+2. Edit `config.js` with your name, links, and [OpenWeatherMap](https://openweathermap.org/) API key
+3. Go to Settings → Pages → Source and select `master`
+4. Set the URL as your browser homepage
 
-To deploy updates from `master` to `gh-pages`:
-
-```bash
-git checkout gh-pages
-git merge master
-git push origin gh-pages
-git checkout master
-```
+<br>
 
 ### Local
-
-Clone the repo and open `index.html` directly, or serve it locally:
 
 ```bash
 git clone https://github.com/divyanshchandhok/sukoon.git
 cd sukoon
-cp config.example.js config.js
-# Edit config.js with your values
 open index.html
 ```
+
+Edit `config.js` to personalize.
+
+<br>
 
 ### Docker
 
@@ -71,9 +132,19 @@ Or manually:
 docker run -it -d -p 80:80 -v ./config.js:/usr/share/nginx/html/config.js sukoon
 ```
 
+<br>
+
+---
+
+<br>
+
 ## Customization
 
-All configuration lives in `config.js`. Copy `config.example.js` to get started.
+<br>
+
+All configuration lives in `config.js`.
+
+<br>
 
 ### General
 
@@ -84,6 +155,8 @@ All configuration lives in `config.js`. Copy `config.example.js` to get started.
 | `openInNewTab` | `true` | Open links in new tabs |
 | `twelveHourFormat` | `true` | 12h clock; set `false` for 24h |
 
+<br>
+
 ### Greetings
 
 | Setting | Default |
@@ -93,11 +166,15 @@ All configuration lives in `config.js`. Copy `config.example.js` to get started.
 | `greetingEvening` | `'Good evening,'` |
 | `greetingNight` | `'Good night, sleep well.'` |
 
+<br>
+
 ### Layout
 
 | Setting | Default | Description |
 |---|---|---|
 | `layout` | `'bento'` | `'bento'`, `'lists'`, or `'buttons'` |
+
+<br>
 
 ### Weather
 
@@ -112,6 +189,8 @@ Get an API key from [OpenWeatherMap](https://openweathermap.org/).
 | `defaultLatitude` | `'0.0'` | Fallback latitude |
 | `defaultLongitude` | `'0.0'` | Fallback longitude |
 
+<br>
+
 ### Theme
 
 | Setting | Default | Description |
@@ -121,6 +200,8 @@ Get an API key from [OpenWeatherMap](https://openweathermap.org/).
 | `changeThemeByHour` | `false` | Switch by time of day |
 | `hourDarkThemeActive` | `'18:30'` | Dark mode activates after this time |
 | `hourDarkThemeInactive` | `'07:00'` | Dark mode deactivates after this time |
+
+<br>
 
 ### Colors
 
@@ -144,14 +225,31 @@ Edit CSS variables in `app.css`:
 }
 ```
 
+<br>
+
 ### Links
 
 Edit `firstButtonsContainer`, `secondButtonsContainer`, `firstlistsContainer`, and `secondListsContainer` in `config.js`. Use [Phosphor Icons](https://phosphoricons.com/) names (e.g., `github-logo`, `spotify-logo`).
 
+<br>
+
+---
+
+<br>
+
 ## Credits
 
-Sukoon is based on [Bento](https://github.com/migueravila/bento) by [Miguel Avila](https://avila.sh), licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0).
+<br>
+
+Sukoon is based on [Bento](https://github.com/migueravila/bento) by [Miguel Avila](https://avila.sh),
+licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0).
+
+<br>
 
 ## License
 
+<br>
+
 [GPL-3.0](License)
+
+</div>
