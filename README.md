@@ -6,24 +6,20 @@
 
 A minimal, premium startpage with swiss typography and calm aesthetics.
 
-<br>
-
-![Sukoon — Light Mode](assets/img/sukoon-light.png)
+</div>
 
 <br>
 
-![Sukoon — Dark Mode](assets/img/sukoon-dark.png)
+<div align="center">
+  <img src="assets/img/sukoon-light.png" width="49%" alt="Sukoon — Light Mode" />
+  <img src="assets/img/sukoon-dark.png" width="49%" alt="Sukoon — Dark Mode" />
+</div>
 
 <br>
 
-## Demonstration
-
-<br>
-
-<!-- To embed the video inline: edit this README on GitHub, drag-drop assets/img/sukoon-demo.mp4
-     into the editor. GitHub uploads it to their CDN and replaces this comment with a playable video. -->
-
-[Watch the demo](assets/img/sukoon-demo.mp4)
+<div align="center">
+  <img src="assets/img/sukoon-demo.gif" width="100%" alt="Sukoon — Demo" />
+</div>
 
 <br>
 
@@ -38,15 +34,11 @@ and smooth theme toggle with icon rotation.
 
 ## Features
 
-<br>
-
 ### Typography
 
 - **Geist variable font** loaded globally for clean, modern rendering
 - **Swiss date and weather stack** — centered typographic layout mirroring the clock
 - **Phosphor Icons** via fast CDN class-based rendering
-
-<br>
 
 ### Animations
 
@@ -55,15 +47,11 @@ and smooth theme toggle with icon rotation.
 - **Expanding underline hovers** on list links — center-expanding effect
 - **Tactile button feedback** — scale-down on theme toggle click
 
-<br>
-
 ### Theming
 
 - **Dark and light mode** with smooth 180° icon rotation
 - **Symmetric accent color system** across clock separator, greeting name, date elements, and weather details
 - **Auto-switch** by OS preference or time of day
-
-<br>
 
 ### Customization
 
@@ -72,15 +60,9 @@ and smooth theme toggle with icon rotation.
 - Minimal weather widget via OpenWeatherMap
 - Full control via `config.js`
 
-<br>
-
 ---
 
-<br>
-
 ## Quick Start
-
-<br>
 
 1. **Fork** this repo
 2. **Edit** `config.js` — add your name, links, and weather API key
@@ -88,15 +70,9 @@ and smooth theme toggle with icon rotation.
 
 Set `https://<your-username>.github.io/sukoon/` as your browser homepage.
 
-<br>
-
 ---
 
-<br>
-
 ## Installation
-
-<br>
 
 ### GitHub Pages
 
@@ -104,8 +80,6 @@ Set `https://<your-username>.github.io/sukoon/` as your browser homepage.
 2. Edit `config.js` with your name, links, and [OpenWeatherMap](https://openweathermap.org/) API key
 3. Go to Settings → Pages → Source and select `master`
 4. Set the URL as your browser homepage
-
-<br>
 
 ### Local
 
@@ -116,8 +90,6 @@ open index.html
 ```
 
 Edit `config.js` to personalize.
-
-<br>
 
 ### Docker
 
@@ -131,19 +103,11 @@ Or manually:
 docker run -it -d -p 80:80 -v ./config.js:/usr/share/nginx/html/config.js sukoon
 ```
 
-<br>
-
 ---
-
-<br>
 
 ## Customization
 
-<br>
-
 All configuration lives in `config.js`.
-
-<br>
 
 ### General
 
@@ -154,8 +118,6 @@ All configuration lives in `config.js`.
 | `openInNewTab` | `true` | Open links in new tabs |
 | `twelveHourFormat` | `true` | 12h clock; set `false` for 24h |
 
-<br>
-
 ### Greetings
 
 | Setting | Default |
@@ -165,15 +127,11 @@ All configuration lives in `config.js`.
 | `greetingEvening` | `'Good evening,'` |
 | `greetingNight` | `'Good night, sleep well.'` |
 
-<br>
-
 ### Layout
 
 | Setting | Default | Description |
 |---|---|---|
 | `layout` | `'bento'` | `'bento'`, `'lists'`, or `'buttons'` |
-
-<br>
 
 ### Weather
 
@@ -188,8 +146,6 @@ Get an API key from [OpenWeatherMap](https://openweathermap.org/).
 | `defaultLatitude` | `'0.0'` | Fallback latitude |
 | `defaultLongitude` | `'0.0'` | Fallback longitude |
 
-<br>
-
 ### Theme
 
 | Setting | Default | Description |
@@ -199,8 +155,6 @@ Get an API key from [OpenWeatherMap](https://openweathermap.org/).
 | `changeThemeByHour` | `false` | Switch by time of day |
 | `hourDarkThemeActive` | `'18:30'` | Dark mode activates after this time |
 | `hourDarkThemeInactive` | `'07:00'` | Dark mode deactivates after this time |
-
-<br>
 
 ### Colors
 
@@ -224,31 +178,16 @@ Edit CSS variables in `app.css`:
 }
 ```
 
-<br>
-
 ### Links
 
 Edit `firstButtonsContainer`, `secondButtonsContainer`, `firstlistsContainer`, and `secondListsContainer` in `config.js`. Use [Phosphor Icons](https://phosphoricons.com/) names (e.g., `github-logo`, `spotify-logo`).
 
-<br>
-
 ---
-
-<br>
 
 ## Credits
 
-<br>
-
-Sukoon is based on [Bento](https://github.com/migueravila/bento) by [Miguel Avila](https://avila.sh),
-licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0).
-
-<br>
+Sukoon is based on [Bento](https://github.com/migueravila/bento) by [Miguel Avila](https://avila.sh), licensed under [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0).
 
 ## License
 
-<br>
-
 [GPL-3.0](License)
-
-</div>
