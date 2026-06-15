@@ -31,7 +31,7 @@ const typeWriter = (element, text, speed = 40) => {
 	const type = () => {
 		if (i < text.length) {
 			const char = text.charAt(i);
-			textSpan.innerText += char;
+			textSpan.textContent += char;
 			i++;
 			
 			// Natural human speed variations (jitter)
@@ -47,7 +47,7 @@ const typeWriter = (element, text, speed = 40) => {
 			// Finished typing the greeting and name:
 			// Pause for 350ms, then append a single period "."
 			setTimeout(() => {
-				textSpan.innerText += '.';
+				textSpan.textContent += '.';
 			}, 350);
 		}
 	};
