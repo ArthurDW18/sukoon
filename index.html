@@ -10,20 +10,26 @@
 		<script>
 			(function() {
 				const darkTheme = localStorage.getItem('darkTheme');
-				let isDark = (darkTheme === 'enabled');
+				let isDark = false;
 				
-				if (window.CONFIG && CONFIG.autoChangeTheme) {
-					if (CONFIG.changeThemeByOS) {
-						isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-					} else if (CONFIG.changeThemeByHour) {
-						const date = new Date();
-						const hours = date.getHours() < 10 ? '0' + date.getHours().toString() : date.getHours().toString();
-						const minutes = date.getMinutes() < 10 ? '0' + date.getMinutes().toString() : date.getMinutes().toString();
-						const currentTime = hours + ':' + minutes;
-						if (currentTime >= CONFIG.hourDarkThemeActive) {
-							isDark = true;
-						} else if (currentTime >= CONFIG.hourDarkThemeInactive) {
-							isDark = false;
+				if (darkTheme === 'enabled') {
+					isDark = true;
+				} else if (darkTheme === 'disabled') {
+					isDark = false;
+				} else {
+					if (window.CONFIG && CONFIG.autoChangeTheme) {
+						if (CONFIG.changeThemeByOS) {
+							isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+						} else if (CONFIG.changeThemeByHour) {
+							const date = new Date();
+							const hours = date.getHours() < 10 ? '0' + date.getHours().toString() : date.getHours().toString();
+							const minutes = date.getMinutes() < 10 ? '0' + date.getMinutes().toString() : date.getMinutes().toString();
+							const currentTime = hours + ':' + minutes;
+							if (currentTime >= CONFIG.hourDarkThemeActive) {
+								isDark = true;
+							} else if (currentTime >= CONFIG.hourDarkThemeInactive) {
+								isDark = false;
+							}
 						}
 					}
 				}
