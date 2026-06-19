@@ -132,46 +132,46 @@ const CONFIG = {
 
 	firstlistsContainer: [
 		{
-			icon: 'sparkle',
+			icon: 'graduation-cap',
 			id: '1',
 			links: [
 				{
-					name: 'Gmail',
-					link: 'https://mail.google.com/',
+					name: 'Canva',
+					link: 'https://www.canva.com/',
 				},
 				{
-					name: 'Calendar',
-					link: 'https://calendar.google.com/',
+					name: 'UFPR',
+					link: 'https://ufprvirtual.ufpr.br/',',
 				},
 				{
 					name: 'Drive',
 					link: 'https://drive.google.com/',
 				},
 				{
-					name: 'Keep',
-					link: 'https://keep.google.com/',
+					name: 'WhatsApp',
+					link: 'https://web.whatsapp.com/',
 				},
 			],
 		},
 		{
-			icon: 'coffee',
+			icon: 'game-controller',
 			id: '2',
 			links: [
 				{
-					name: 'Stack Overflow',
-					link: 'https://stackoverflow.com/',
+					name: 'Steam',
+					link: 'https://store.steampowered.com/',
 				},
 				{
-					name: 'MDN',
-					link: 'https://developer.mozilla.org/',
+					name: 'Fitgirl',
+					link: 'https://fitgirl-repacks.site/',
 				},
 				{
-					name: 'Dev.to',
-					link: 'https://dev.to/',
+					name: 'Spotify',
+					link: 'https://open.spotify.com/',
 				},
 				{
-					name: 'Hacker News',
-					link: 'https://news.ycombinator.com/',
+					name: 'Sofifa',
+					link: 'https://sofifa.com/',
 				},
 			],
 		},
