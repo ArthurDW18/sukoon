@@ -141,7 +141,7 @@ const CONFIG = {
 				},
 				{
 					name: 'UFPR',
-					link: 'https://ufprvirtual.ufpr.br/',',
+					link: 'https://ufprvirtual.ufpr.br/',
 				},
 				{
 					name: 'Drive',
