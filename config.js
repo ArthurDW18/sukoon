@@ -22,7 +22,7 @@ const CONFIG = {
 	greetingNight: 'Boa noite,',
 
 	// Layout
-	layout: 'buttons', // 'bento', 'lists', 'buttons'
+	layout: 'bento', // 'bento', 'lists', 'buttons'
 
 	// Weather
 	weatherKey: 'f23324aebe1f463075ae77510ab48727', // Get your API key from https://openweathermap.org/
