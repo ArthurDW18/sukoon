@@ -28,7 +28,7 @@ const CONFIG = {
 	weatherKey: 'f23324aebe1f463075ae77510ab48727', // Get your API key from https://openweathermap.org/
 	weatherIcons: 'OneDark', // 'OneDark', 'Nord', 'Dark', 'White'
 	weatherUnit: 'C', // 'C' or 'F'
-	language: 'en', // More languages at https://openweathermap.org/current#multi
+	language: 'pt_br', // More languages at https://openweathermap.org/current#multi
 	trackLocation: true, // If false or an error occurs, the app will use the lat/lon below
 	defaultLatitude: '0.0',
 	defaultLongitude: '0.0',
@@ -75,9 +75,9 @@ const CONFIG = {
 		},
 		{
 			id: '5',
-			name: 'Twitter',
-			icon: 'x-logo',
-			link: 'https://x.com/',
+			name: 'Claude',
+			icon: 'robot',
+			link: 'https://claude.ai/new',
 		},
 		{
 			id: '6',
@@ -96,21 +96,21 @@ const CONFIG = {
 		},
 		{
 			id: '2',
-			name: 'Amazon',
-			icon: 'amazon-logo',
-			link: 'https://amazon.com/',
+			name: 'Steam',
+			icon: 'steam-logo',
+			link: 'https://store.steampowered.com/',
 		},
 		{
 			id: '3',
-			name: 'Figma',
-			icon: 'figma-logo',
-			link: 'https://figma.com/',
+			name: 'UFPR',
+			icon: 'graduation-cap',
+			link: 'https://ufprvirtual.ufpr.br/',
 		},
 		{
 			id: '4',
-			name: 'Hashnode',
-			icon: 'hashnode-logo',
-			link: 'https://hashnode.com/',
+			name: 'Teams',
+			icon: 'microsoft-teams-logo',
+			link: 'https://teams.microsoft.com/v2/',
 		},
 		{
 			id: '5',
@@ -120,9 +120,9 @@ const CONFIG = {
 		},
 		{
 			id: '6',
-			name: 'Telegram',
-			icon: 'paper-plane-tilt',
-			link: 'https://web.telegram.org/',
+			name: 'Sofifa',
+			icon: 'soccer-ball',
+			link: 'https://sofifa.com/',
 		},
 	],
 
