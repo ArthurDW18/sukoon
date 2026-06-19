@@ -51,9 +51,9 @@ const CONFIG = {
 	firstButtonsContainer: [
 		{
 			id: '1',
-			name: 'GitHub',
-			icon: 'github-logo',
-			link: 'https://github.com/',
+			name: 'Teams',
+			icon: 'microsoft-teams-logo',
+			link: 'https://teams.microsoft.com/v2/',
 		},
 		{
 			id: '2',
