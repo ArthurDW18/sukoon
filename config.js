@@ -13,7 +13,7 @@ const CONFIG = {
 	name: 'Arthur',
 	imageBackground: false,
 	openInNewTab: true,
-	twelveHourFormat: true,
+	twelveHourFormat: false,
 
 	// Greetings
 	greetingMorning: 'Bom Dia,',
